@@ -1,0 +1,312 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding-top: 17px;
+            padding-bottom: 170px;
+            padding-left: 0;
+            margin-left: 0;
+        }
+    
+    .h {
+        color: #303540;
+        margin-bottom: 1em;
+        transition: font-size 300ms ease-out;
+        padding-left: 86px;
+        position: relative;
+        min-height: 25px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .h:before {
+        display: inline-block;
+        font-size: 12px;
+        padding: 4px 2px;
+        width: 60px;
+        text-align: center;
+        margin-top: -2px;
+        background-color: #414756;
+        border: 1px solid #303540;
+        color: white;
+        font-weight: bold;
+        font-family: "Menlo", monospace;
+        border-radius: 3px;
+        vertical-align: middle;
+        line-height: 1.2em;
+        height: 1.2em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 1;
+        transition: opacity 200ms ease-out;
+    }
+    
+    .article .h:before {
+        opacity: 0;
+    }
+    
+    .h:hover:before {
+        opacity: 1;
+    }
+    
+    .h1:before {
+        background-color: #E35D3D;
+        border-color: #CB5538;
+    }
+    
+    .tipsy-data {
+        position: fixed;
+        bottom: 37px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        padding: 15px 0;
+        height: 50px;
+        background: #474f60;
+        color: #fff;
+        border-bottom: 1px solid #303540;
+        display: flex;
+    }
+    
+    .tipsy-data__item {
+        padding: 0 65px 0 25px;
+        border-right: 1px dashed #303540;
+    }
+    
+    em.tipsy-data__title {
+        font-style: normal;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: Lato, sans-serif;
+    }
+    
+    p.tipsy-data__value {
+        margin: 11px 0 0;
+    }
+    
+    .tipsy-signature {
+        position: fixed;
+        z-index: 2;
+        bottom: 0;
+        margin: 0;
+        right: 0;
+        left: 0;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 12px;
+        text-align: right;
+        background: #414756;
+        color: #fff;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: Lato, Menlo, monospace;
+    }
+    
+    .preview {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .article__title {
+        max-width: 600px;
+        line-height: 1.4em;
+        margin-bottom: 0.6em;
+        color: #303540;
+    }
+    
+    .article__excerpt {
+        line-height: 1.6em;
+    }
+    
+    .article * {
+        position: relative;
+        display: block;
+    }
+    
+    .article__content strong,
+    .article__content em {
+        display: inline;
+    }
+    
+    .article .h:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: opacity 200ms ease-out;
+        right: 100%;
+        /* margin-right: 20px; */
+    }
+    
+    .article__content {
+        color: #474f60;
+        z-index: 1;
+    }
+    
+    .article__content h2,
+    .article__content h3 {
+        color: #303540;
+        margin-top: 1.8em;
+        line-height: 1.4em;
+    }
+    
+    .article__content ol,
+    .article__content ul,
+    .article__content p {
+        line-height: 1.8em;
+        margin-top: 1.5em;
+    }
+    
+    .article__content li + li {
+        margin-top: 0.7em;
+    }
+    
+    .article__content ul,
+    .article__content ol {
+        list-style-type: none;
+        counter-reset: ol;
+        padding-left: 125px;
+    }
+    
+    .article__content li {
+        position: relative;
+    }
+    
+    .article__content ul li:before {
+        content: '•';
+        color: #E35D3D;
+        position: absolute;
+        display: inline-block !important;
+        text-indent: -1.3em;
+    }
+    
+    .article__content ol li:before {
+        counter-increment: ol;
+        content: counter(ol);
+        color: #E35D3D;
+        font-weight: bold;
+        display: block !important;
+        position: absolute;
+        right: calc(100% + 0.7em);
+    }
+    
+    .article__content .blockquote__inner {
+        line-height: 1.6em;
+        position: relative;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    
+    .article__content .blockquote__inner:before,
+    .article__content .blockquote__inner:after {
+        font-size: 2.5em;
+        font-weight: bold;
+        display: block !important;
+        height: 1em;
+        position: absolute;
+        margin: auto;
+        color: #E35D3D;
+    }
+    
+    .article__content .blockquote__inner:before {
+        content: '“';
+        top: 0;
+        left: -1em;
+    }
+    
+    .article__content blockquote.h:before {
+        margin-left: -40px;
+    }
+    
+    .article__content .blockquote__inner:after {
+        content: '”';
+        right: -1em;
+        bottom: -1em;
+    }
+    
+    .preview--scale {
+        margin-bottom: 60px;
+    }
+
+        /* STYLES */
+    </style>
+</head>
+
+<body>
+    <div class="preview preview--scale">
+        <!-- ELEMENTS -->
+    </div>
+    
+    <div class="preview preview--article article">
+        <h1 class="h h4 article__title">Spare me your space age technobabble, Attila the Hun!</h1>
+        <p class="h h2 article__excerpt">Yes. You gave me a dollar and some candy. Who are those horrible orange men? Throw her in the brig. These old Doomsday
+        Devices are dangerously unstable.</p>
+        
+        <div class="article__content">
+            <p class="h h1">The way I see it, every life is a pile of good things and bad things… hey… the good things <em>don't always soften the bad things</em>; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant. <strong>You know how I sometimes have really brilliant ideas?</strong> It's a fez. I wear a fez now. Fezes are cool.
+            </p>
+            
+            <blockquote class="h h1">
+                <div class="blockquote__inner">
+                    And remember, don't do anything that affects anything, unless it turns out you were supposed to, in which case, for the love of God, don't not do it! I'm just glad my fat, ugly mama isn't alive to see this day.
+                </div>
+            </blockquote>
+            <p class="h h1">With a warning label this big, you know they gotta be fun! Anyone who laughs is a communist! As an interesting side note,
+            as a head without a body, I envy the dead. I could if you hadn't turned on the light and shut off my stereo.</p>
+            <p class="h h1">
+            Then we'll go with that data file! I'm sorry, guys. I never meant to hurt you. Just to destroy everything you ever believed
+            in.
+            <strong> Alright, let's mafia things up a bit.</strong>
+            <em> Joey, burn down the ship.</em> Clamps, burn down the crew.
+            </p>
+            
+            <h3 class="h h2">There, now he's trapped in a book I wrote: a crummy world of plot holes and spelling errors!</h3>
+            <p class="h h1">What are you hacking off? Is it my torso?! 'It is!' My precious torso! Why would a robot need to drink? Tell her
+            you just want to talk. It has nothing to do with mating. Take me to your leader!</p>
+            <ol class="h h1">
+                <li>Interesting. No, wait, the other thing: tedious.</li>
+                <li>File not found.</li>
+                <li>Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood!</li>
+            </ol>
+            
+            <p class="h h1">Sorry, checking all the water in this area; there's an escaped fish. You hit me with a cricket bat. The way I see
+            it, every life is a pile of good things and bad things… hey… the good things
+            <em>don't always soften the bad things</em>; but vice-versa the bad things don't necessarily spoil the good things
+            and make them unimportant.
+            <strong>You know how I sometimes have really brilliant ideas?</strong> It's a fez. I wear a fez now. Fezes are cool.
+            You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make
+            you feel better?</p>
+            
+            <h3 class="h h2">You, minion. Lift my arm. AFTER HIM!</h3>
+            <p class="h h1">Can we have Bender Burgers again? I daresay that Fry has discovered the smelliest object in the known universe! Alright,
+            let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew.</p>
+            <ul class="h h1">
+                <li>Well, thanks to the Internet, I'm now bored with sex. Is there a place on the web that panders to my lust for
+                    violence?</li>
+                <li>Robot 1-X, save my friends! And Zoidberg!</li>
+                <li>I guess if you want children beaten, you have to do it yourself.</li>
+            </ul>
+            
+            <p class="h h1">Oh sure! Blame the wizards! We need rest. The spirit is willing, but the flesh is spongy and bruised. Fatal. And
+            so we say goodbye to our beloved pet, Nibbler, who's gone to a place where I, too, hope one day to go. The toilet.</p>
+            
+            <div class="h h-1">* I am the Doctor, and you are the Daleks! No… It's a thing; it's like a plan, but with more greatness.</div>
+            <div class="h h-2">* I am the Doctor, and you are the Daleks! No… It's a thing; it's like a plan, but with more greatness.</div>
+        </div>
+    </div>
+    
+    <script>
+        function updateSizes(items) {
+            items.forEach(item => {
+                let el = document.querySelector(item.selector)
+                el.style.fontSize = item.size + 'px'
+            })
+        }
+    </script>
+</body>
+
+</html>
