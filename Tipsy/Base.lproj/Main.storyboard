@@ -689,7 +689,7 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="585" y="357" width="680" height="500"/>
+                        <rect key="contentRect" x="585" y="357" width="1100" height="500"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
@@ -708,7 +708,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1100" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="ultraDark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="0zj-4n-rE1">
@@ -891,13 +891,13 @@
                                 </constraints>
                             </visualEffectView>
                             <box boxType="custom" borderType="none" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="9bd-Tj-mRc">
-                                <rect key="frame" x="263" y="0.0" width="537" height="500"/>
+                                <rect key="frame" x="263" y="0.0" width="837" height="500"/>
                                 <view key="contentView" id="fOt-6f-8HB">
-                                    <rect key="frame" x="0.0" y="0.0" width="537" height="500"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="837" height="500"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qjc-0D-mIo">
-                                            <rect key="frame" x="448" y="467" width="79" height="18"/>
+                                            <rect key="frame" x="748" y="467" width="79" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="18" id="BCl-GA-5SN"/>
                                                 <constraint firstAttribute="width" constant="79" id="PgX-m2-ZfI"/>
@@ -919,7 +919,7 @@
                                 <color key="fillColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </box>
                             <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Re-ob-jhp" customClass="CustomWebView" customModule="Tipsy" customModuleProvider="target">
-                                <rect key="frame" x="263" y="0.0" width="537" height="465"/>
+                                <rect key="frame" x="263" y="0.0" width="837" height="465"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -955,6 +955,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Export icon" width="72" height="72"/>
+        <image name="Export icon" width="36" height="36"/>
     </resources>
 </document>
