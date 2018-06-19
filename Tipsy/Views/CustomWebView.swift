@@ -16,6 +16,7 @@ class CustomWebView: WKWebView {
         "1.618 — Golden Ratio": 1.61803398875,
         "1.500 — Perfect Fifth": 1.5,
         "1.414 — √2": 1.41421356237,
+        "1.4 — GJP": 1.4,
         "1.570 — π / 2": 1.57079632679,
         "2.718 — e": 2.71828182846
     ]
@@ -28,8 +29,10 @@ class CustomWebView: WKWebView {
         self.evaluateJavaScript(jsString)
     }
     
-    func render(_ text: String, font: String, steps: Int, base: Int, scale: String?) {
-        let html = generateHtml(text, font: font, steps: steps, base: base, scale: scale, export: false)
+    func render(_ text: String, font: String, steps: Int, base: Int, scale: String?, isPopover: Bool) {
+        //self.setValue(false, forKey: "drawsBackground")
+        
+        let html = generateHtml(text, font: font, steps: steps, base: base, scale: scale, export: false, isPopover: isPopover)
         loadHTMLString(html, baseURL: nil)
     }
     
@@ -53,7 +56,7 @@ class CustomWebView: WKWebView {
         return scales[unwrapped] ?? 1.61803398875
     }
     
-    func generateHtml(_ text: String, font: String, steps: Int, base: Int, scale: String?, export: Bool) -> String {
+    func generateHtml(_ text: String, font: String, steps: Int, base: Int, scale: String?, export: Bool, isPopover: Bool) -> String {
         var template = loadHtmlString() ?? ""
         let scaleDouble = getScaleDouble(scale)
         var string = ""
@@ -61,6 +64,10 @@ class CustomWebView: WKWebView {
         
         string = string + "body { font-family: sans-serif; }"
         string = string + "body { font-family: \(font), sans-serif; }"
+        
+        if isPopover {
+            // Do stuff here for the popover exclusively
+        }
         
         for i in 1...steps{
             // Double the index so we have more variation between each item

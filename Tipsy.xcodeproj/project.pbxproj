@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850CA04C20BDD99500114B20 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850CA04B20BDD99500114B20 /* PopoverViewController.swift */; };
+		850CA04E20BDEE5200114B20 /* RenderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850CA04D20BDEE5200114B20 /* RenderData.swift */; };
 		85237CBD20AB89EC007B1ABE /* CustomWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85237CBC20AB89EC007B1ABE /* CustomWebView.swift */; };
 		85341F2620AA0CA0004B37FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85341F2520AA0CA0004B37FD /* AppDelegate.swift */; };
 		85341F2820AA0CA0004B37FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85341F2720AA0CA0004B37FD /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		850CA04B20BDD99500114B20 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		850CA04D20BDEE5200114B20 /* RenderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderData.swift; sourceTree = "<group>"; };
 		85237CBC20AB89EC007B1ABE /* CustomWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWebView.swift; sourceTree = "<group>"; };
 		85341F2220AA0CA0004B37FD /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85341F2520AA0CA0004B37FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,12 +74,14 @@
 				85237CBB20AB89BE007B1ABE /* Views */,
 				85EAB38420AA3FDA00FB2492 /* Extensions */,
 				85341F2520AA0CA0004B37FD /* AppDelegate.swift */,
+				850CA04B20BDD99500114B20 /* PopoverViewController.swift */,
 				85341F2720AA0CA0004B37FD /* ViewController.swift */,
 				85341F2920AA0CA1004B37FD /* Assets.xcassets */,
 				85341F2B20AA0CA1004B37FD /* Main.storyboard */,
 				85341F2E20AA0CA1004B37FD /* Info.plist */,
 				856CAF4520AB68490023581A /* tipsy.html */,
 				85341F2F20AA0CA1004B37FD /* TypoSizer.entitlements */,
+				850CA04D20BDEE5200114B20 /* RenderData.swift */,
 			);
 			path = Tipsy;
 			sourceTree = "<group>";
@@ -161,8 +167,10 @@
 			files = (
 				85341F2820AA0CA0004B37FD /* ViewController.swift in Sources */,
 				85EAB38620AA3FEC00FB2492 /* CleanDouble.swift in Sources */,
+				850CA04C20BDD99500114B20 /* PopoverViewController.swift in Sources */,
 				85237CBD20AB89EC007B1ABE /* CustomWebView.swift in Sources */,
 				85341F2620AA0CA0004B37FD /* AppDelegate.swift in Sources */,
+				850CA04E20BDEE5200114B20 /* RenderData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,9 +305,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 6E5S82M4S4;
+				DEVELOPMENT_TEAM = 7EJ37WYLDD;
 				INFOPLIST_FILE = Tipsy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +316,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.voidgraphics.Tipsy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -315,9 +325,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 6E5S82M4S4;
+				DEVELOPMENT_TEAM = 7EJ37WYLDD;
 				INFOPLIST_FILE = Tipsy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -325,6 +336,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.voidgraphics.Tipsy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
