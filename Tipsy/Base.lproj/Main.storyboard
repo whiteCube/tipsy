@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14109"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14113"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -703,6 +703,37 @@
             </objects>
             <point key="canvasLocation" x="75" y="334"/>
         </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="Ysd-EY-lbk">
+            <objects>
+                <viewController storyboardIdentifier="PopoverViewController" id="erP-HT-gYk" customClass="PopoverViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="ZJI-WM-BTd">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="500"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMo-kE-g46" customClass="CustomWebView" customModule="Tipsy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="800" height="500"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="IMo-kE-g46" firstAttribute="leading" secondItem="ZJI-WM-BTd" secondAttribute="leading" id="5Il-f2-cNO"/>
+                            <constraint firstItem="IMo-kE-g46" firstAttribute="top" secondItem="ZJI-WM-BTd" secondAttribute="top" id="5Tz-Bx-YpZ"/>
+                            <constraint firstAttribute="trailing" secondItem="IMo-kE-g46" secondAttribute="trailing" id="7bH-N4-qi4"/>
+                            <constraint firstAttribute="bottom" secondItem="IMo-kE-g46" secondAttribute="bottom" id="bm5-EN-7UA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="IMo-kE-g46" id="c0x-n6-W0F"/>
+                    </connections>
+                </viewController>
+                <customObject id="BJV-i9-A04" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1097" y="862"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
@@ -786,7 +817,8 @@
                                                         <items>
                                                             <menuItem title="1.618 — Golden Ratio" state="on" id="7tV-5J-SeG"/>
                                                             <menuItem title="1.500 — Perfect Fifth" id="4JR-sf-Q1h"/>
-                                                            <menuItem title="1.414 — √2" id="zBh-pC-Ye7"/>
+                                                            <menuItem title="1.4 — GJP" id="zBh-pC-Ye7"/>
+                                                            <menuItem title="1.414 — √2" id="ujB-Jb-TuD"/>
                                                             <menuItem title="1.570 — π / 2" id="G4S-PH-QVE"/>
                                                             <menuItem title="2.718 — e" id="LgU-Mc-eVT"/>
                                                         </items>
